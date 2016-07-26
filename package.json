@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A new Webpack boilerplate with hot reloading React components, and error handling on module and component level.",
   "scripts": {
+    "build": " ./node_modules/.bin/webpack",
     "start": "node devServer.js"
   },
   "repository": {
@@ -52,7 +53,9 @@
     "webpack-hot-middleware": "^2.9.1"
   },
   "dependencies": {
+    "lodash": "^4.14.0",
     "react": "^15.2.1",
-    "react-dom": "^15.2.1"
+    "react-dom": "^15.2.1",
+    "react-tap-event-plugin": "^1.0.0"
   }
 }

@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import Header from './Header';
-import List from './List';
-import Footer from './Footer';
+import Header from './components/Header';
+import List from './components/List';
+import Footer from './components/Footer';
 
 
 class App extends React.Component {
-
+  getChildContext() {
+    return {muiTheme: getMuiTheme()};
+  }
   render () {
     return(
       <div>
@@ -18,6 +21,8 @@ class App extends React.Component {
     )
   }
 }
-
+App.childContextTypes = {
+  muiTheme: React.PropTypes.object.isRequired,
+};
 
 export default App;
